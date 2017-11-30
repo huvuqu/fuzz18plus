@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<errors>
+    <!-- MySQL -->
+    <mysql>
+        <regexp>SQL syntax.*?MySQL</regexp>
+        <regexp>Warning.*?mysql_</regexp>
+        <regexp>MySqlException \(0x</regexp>
+        <regexp>valid MySQL result</regexp>
+        <regexp>check the manual that corresponds to your (MySQL|MariaDB) server version</regexp>
+        <regexp>MySqlClient\.</regexp>
+        <regexp>com\.mysql\.jdbc\.exceptions</regexp>
+    </mysql>
+
+    <!-- PostgreSQL -->
+    <postgre>
+        <regexp>PostgreSQL.*?ERROR</regexp>
+        <regexp>Warning.*?\Wpg_</regexp>
+        <regexp>valid PostgreSQL result</regexp>
+        <regexp>Npgsql\.</regexp>
+        <regexp>PG::SyntaxError:</regexp>
+        <regexp>org\.postgresql\.util\.PSQLException</regexp>
+        <regexp>ERROR:\s\ssyntax error at or near</regexp>
+    </postgre>
+
+    <!-- Microsoft SQL Server -->
+    <mssql>
+        <regexp>Driver.*? SQL[\-\_\ ]*Server</regexp>
+        <regexp>OLE DB.*? SQL Server</regexp>
+        <regexp>\bSQL Server[^&lt;&quot;]+Driver</regexp>
+        <regexp>Warning.*?(mssql|sqlsrv)_</regexp>
+        <regexp>\bSQL Server[^&lt;&quot;]+[0-9a-fA-F]{8}</regexp>
+        <regexp>System\.Data\.SqlClient\.SqlException</regexp>
+        <regexp>(?s)Exception.*?\WRoadhouse\.Cms\.</regexp>
+        <regexp>Microsoft SQL Native Client error '[0-9a-fA-F]{8}</regexp>
+        <regexp>com\.microsoft\.sqlserver\.jdbc\.SQLServerException</regexp>
+        <regexp>ODBC SQL Server Driver</regexp>
+        <regexp>SQLServer JDBC Driver</regexp>
+        <regexp>macromedia\.jdbc\.sqlserver</regexp>
+        <regexp>com\.jnetdirect\.jsql</regexp>
+        <regexp>Server Error in</regexp>
+        <regexp>Microsoft SQL Native Client error</regexp>
+    </mssql>
+
+    <!-- SQLite -->
+    <sqlite>
+        <regexp>SQLite/JDBCDriver</regexp>
+        <regexp>SQLite\.Exception</regexp>
+        <regexp>(Microsoft|System)\.Data\.SQLite\.SQLiteException</regexp>
+        <regexp>Warning.*?sqlite_</regexp>
+        <regexp>Warning.*?SQLite3::</regexp>
+        <regexp>\[SQLITE_ERROR\]</regexp>
+        <regexp>SQLite error \d+:</regexp>
+        <regexp>sqlite3.OperationalError:</regexp>
+    </sqlite>
+
+    <!-- Microsoft Access -->
+    <microsoftaccess>
+        <regexp>Microsoft Access (\d+ )?Driver</regexp>
+        <regexp>JET Database Engine</regexp>
+        <regexp>Access Database Engine</regexp>
+        <regexp>ODBC Microsoft Access</regexp>
+        <regexp>Syntax error \(missing operator\) in query expression</regexp>
+        <regexp>Fatal error</regexp>
+    </microsoftaccess>
+
+    <!-- Oracle -->
+    <oracle>
+        <regexp>\bORA-\d{5}</regexp>
+        <regexp>Oracle error</regexp>
+        <regexp>Oracle.*?Driver</regexp>
+        <regexp>Warning.*?\Woci_</regexp>
+        <regexp>Warning.*?\Wora_</regexp>
+        <regexp>oracle\.jdbc\.driver</regexp>
+        <regexp>quoted string not properly terminated</regexp>
+        <regexp>SQL command not properly ended</regexp>
+    </oracle>
+
+    <!-- IBM DB2 -->
+    <ibmdb2>
+        <regexp>CLI Driver.*?DB2</regexp>
+        <regexp>DB2 SQL error</regexp>
+        <regexp>\bdb2_\w+\(</regexp>
+        <regexp>SQLSTATE.+SQLCODE</regexp>
+    </ibmdb2>
+
+    <!-- Informix -->
+    <informix>
+        <regexp>Exception.*?Informix</regexp>
+        <regexp>Informix ODBC Driver</regexp>
+        <regexp>com\.informix\.jdbc</regexp>
+        <regexp>weblogic\.jdbc\.informix</regexp>
+    </informix>
+
+    <!-- Interbase/Firebird -->
+    <firebird>
+        <regexp>Dynamic SQL Error</regexp>
+        <regexp>Warning.*?ibase_</regexp>
+    </firebird>
+
+
+    <!-- SAP MaxDB -->
+    <sapmaxdb>
+        <regexp>SQL error.*?POS([0-9]+)</regexp>
+        <regexp>Warning.*?maxdb</regexp>
+    </sapmaxdb>
+
+    <!-- Sybase -->
+    <sybase>
+        <regexp>Warning.*?sybase</regexp>
+        <regexp>Sybase message</regexp>
+        <regexp>Sybase.*?Server message</regexp>
+        <regexp>SybSQLException</regexp>
+        <regexp>com\.sybase\.jdbc</regexp>
+    </sybase>
+
+    <!-- Ingres -->
+    <ingres>
+        <regexp>Warning.*?ingres_</regexp>
+        <regexp>Ingres SQLSTATE</regexp>
+        <regexp>Ingres\W.*?Driver</regexp>
+    </ingres>
+
+    <!-- Frontbase -->
+    <frontbase>
+        <regexp>Exception (condition )?\d+\. Transaction rollback</regexp>
+        <regexp>com\.frontbase\.jdbc</regexp>
+    </frontbase>
+
+    <!-- HSQLDB -->
+    <hsqldb>
+        <regexp>org\.hsqldb\.jdbc</regexp>
+        <regexp>Unexpected end of command in statement \[</regexp>
+        <regexp>Unexpected token.*?in statement \[</regexp>
+    </hsqldb>
+
+</errors>
